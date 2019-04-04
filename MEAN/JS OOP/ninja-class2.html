@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ninja Class II</title>
+    <meta charset="UTF-8">
+    <script>
+        // CONSTRUCTOR //
+        function Ninja(ninjaName) {
+            this.name = ninjaName;
+            this.health = 100;
+            var speed = 3;
+            var strength = 3;
+
+            this.showSpeed = function() {
+                return speed;
+            };
+            this.showStrength = function() {
+                return strength;
+            };
+        }
+        
+        // PROTOTYPES //
+        Ninja.prototype.sayName = function() {
+            console.log("My ninja name is " + this.name + "!");
+        };
+        Ninja.prototype.showStats = function() {
+            console.log("Name: " + this.name + ", Health: " + this.health + ", Speed: " + this.showSpeed() + ", Strength: " + this.showStrength());
+        };
+        Ninja.prototype.drinkSake = function() {
+            this.health += 10;
+            return this;
+        };
+        Ninja.prototype.punch = function(target) {
+            if (target instanceof Ninja) {
+                let damage = this.showStrength()*3;
+                target.health -= damage;
+                console.log(target.name + " was kicked by " + this.name + " and lost " + damage + " Health!");
+            }
+            else {
+                console.log("You can only kick other ninjas!");
+            }
+        };
+        Ninja.prototype.kick = function(target) {
+            if (target instanceof Ninja) {
+                let damage = this.showStrength()*3;
+                target.health -= damage;
+                console.log(target.name + " was kicked by " + this.name + " and lost " + damage + " Health!");
+            }
+            else {
+                console.log("You can kick other ninjas!");
+            }
+        };
+
+        // Non-ninja Object
+        function Samurai(samuraiName) {
+            this.name = samuraiName;
+            this.health = 100;
+            var speed = 3;
+            var strength = 3;
+        }
+
+        // Create Ninja & non-ninja instances
+        var blueNinja = new Ninja("Goemon");
+        var redNinja = new Ninja("Bill Gates");
+        var samurai = new Samurai("Steve Jobs");
+
+        blueNinja.sayName();
+        redNinja.kick(blueNinja);
+        redNinja.punch(samurai);
+        blueNinja.showStats();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

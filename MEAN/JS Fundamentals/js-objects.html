@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>JS Objects</title>
+    <script>
+        // Challenge 1
+        // function displayStudents(arr) {
+        //     for (let student of arr) {
+        //         console.log("Name: " + student.name + ", Cohort: " + student.cohort);
+        //     }
+        // }
+
+        // let students = [
+        //     {name: 'Remy', cohort: 'Jan'},
+        //     {name: 'Genevieve', cohort: 'March'},
+        //     {name: 'Chuck', cohort: 'Jan'},
+        //     {name: 'Osmund', cohort: 'June'},
+        //     {name: 'Nikki', cohort: 'June'},
+        //     {name: 'Boris', cohort: 'June'}
+        // ];
+
+        // displayStudents(students);
+
+        // Challenge 2
+        function countCharacters(arr) {
+            for (let group in arr) {
+                console.log(group.toUpperCase);
+                for (let i = 1; i <= group.length(); i++) {
+
+                }
+            }
+        }
+
+        let users = {
+            employees: [
+                {'first_name':  'Miguel', 'last_name' : 'Jones'},
+                {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+                {'first_name' : 'Nora', 'last_name' : 'Lu'},
+                {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+        ],
+            managers: [
+                {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+                {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+            ]
+        };
+
+        countCharacters(users);
+    </script>
+</head>
+</html>

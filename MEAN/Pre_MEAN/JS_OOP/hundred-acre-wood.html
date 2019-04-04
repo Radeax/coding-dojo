@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hundred Acre Wood</title>
+    <script>
+        var winnie = { character: "Winnie the Pooh" };
+        var chris = { character: "Christopher Robin" };
+        var kanga = { character: "Kanga" };
+        var owl = { character: "Owl" };
+        var piglet = { character: "Piglet" };
+        var tigger = { character: "Tigger" };
+        var bees = { character: "Vees" };
+        var rabbit = { character: "Rabbit" };
+        var gopher = { character: "Gopher" };
+        var eeyore = { character: "Eeyore" };
+        var heffla = { character: "Hefflalumps" };
+
+        // Winnie the Pooh
+        winnie.north = chris;
+        winnie.east = bees;
+        winnie.south = tigger;
+        winnie.west = piglet;
+
+        // Christopher Robin
+        chris.north = kanga;
+        chris.east = rabbit;
+        chris.south = winnie;
+        chris.west = owl;
+
+        // Tigger
+        tigger.north = winnie;
+
+        // Piglet
+        piglet.east = winnie;
+        piglet.north = owl;
+
+        // Bees
+        bees.north = rabbit;
+        bees.west = winnie;
+
+        // Owl
+        owl.east = chris;
+        owl.south = piglet;
+
+        // Rabbit
+        rabbit.east = gopher;
+        rabbit.south = bees;
+        rabbit.west = robin;
+
+        // Kanga
+        kanga.north = Eeyore;
+        kanga.south = chris;
+
+        // Eeyore
+        eeyore.south = kanga;
+        eeyore.east = heffla;
+
+        // Hefflalumps
+        heffla.west = eeyore;
+    </script>
+</head>
+<body>
+</body>
+</html>

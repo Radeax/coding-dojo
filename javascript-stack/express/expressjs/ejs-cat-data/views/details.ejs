@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cats</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Details Page for <%= cat['name'] %></h1>
+    <table>
+        <tr>
+            <td>
+                <p>Favorite Food: </p>
+            </td>
+            <td>
+                <p><%= cat['favFood'] %></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Age: </p>
+            </td>
+            <td>
+                <p><%= cat['age'] %></p>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="<%= cat['sleepingSpots'].length %>" style="vertical-align: top">
+                <p></p>Sleeping spots:</p>
+            </td>
+            <td>
+                <% for (let spot of cat['sleepingSpots']) { %>
+                    <p><%= spot %></p>
+                <% } %>
+            </td>
+        </tr>
+    </table>
+        
+        
+</body>
+</html>

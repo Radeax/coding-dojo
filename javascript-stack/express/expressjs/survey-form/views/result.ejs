@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <fieldset>
+        <u><strong>Submitted Information</strong></u>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Your Name: </label>
+                </td>
+                <td>
+                    <%= data['name'] %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="location">Dojo Location: </label>
+                </td>
+                <td>
+                    <%= data['location'] %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="language">Favorite Language: </label>
+                </td>
+                <td>
+                    <%= data['language'] %>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="comment">Comment: </label>
+                </td>
+                <td>
+                    <%= data['comment'] %>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="submit">
+                    <form action="/" method="get">
+                        <button>Go Back</button>
+                    </form>
+                </td>
+                </tr>
+        </table>
+        </form>
+    </fieldset>
+</body>
+</html>

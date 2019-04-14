@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <fieldset>
+        <form action="/result" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Your Name: </label>
+                    </td>
+                    <td>
+                        <input type="text" name="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="location">Dojo Location: </label>
+                    </td>
+                    <td>
+                        <select name="location">
+                            <option value="Mountain View">Mountain View</option>
+                            <option value="Seattle">Seattle</option>
+                            <option value="Tysons Corner">Tysons Corner</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="language">Favorite Language: </label>
+                    </td>
+                    <td>
+                        <select name="language">
+                            <option value="Python">Python</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Java">Java</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="comment">Comment (optional): </label>
+                    </td>
+                    <td>
+                        <textarea name="comment"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="submit">
+                        <button>Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,13 @@
+fieldset {
+    display: inline-block;
+    text-align: justify;
+}
+body {
+    text-align: center;
+}
+select, textarea {
+    width: 100%;
+}
+.submit {
+    text-align: right;
+}

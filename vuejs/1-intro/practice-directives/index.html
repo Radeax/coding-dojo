@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Things to Learn</title>
+</head>
+<body>
+  <div id="root">
+    <h1>{{ name }}'s List of Things to Learn</h1>
+    <h3 v-if="tech">Tech</h3>
+    <ul v-for="type, idx in tech" v-bind:key="'T' + idx">
+      <li v-if="idx % 2 == 0">{{ type }}</li>
+    </ul>
+    <h3 v-if="financial">Financial</h3>
+    <ul v-for="type, idx in financial" v-bind:key="'F' + idx">
+      <li v-if="idx % 2 == 0"> {{ type }}</li>
+    </ul>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
